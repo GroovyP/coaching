@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gowen Pottiez — Coach d'experts introvertis</title>
+<meta name="description" content="Experts et managers introvertis : prenez votre place sans hausser la voix. Coaching individuel sur 3 mois. 15 ans chez Euronext et Crédit Agricole.">
+<style>
+  :root {
+    --encre: #1a1a1a;
+    --papier: #faf9f7;
+    --accent: #b8541f;
+    --accent-doux: #e8ddd2;
+    --gris: #6b6b6b;
+    --maxw: 920px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--encre);
+    background: var(--papier);
+    line-height: 1.7;
+    font-size: 18px;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HERO ---------- */
+  header {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid #e5e0da;
+  }
+  .hero { display: flex; gap: 48px; align-items: center; flex-wrap: wrap; }
+  .hero-text { flex: 1 1 420px; }
+  .hero-photo { flex: 0 0 200px; text-align: center; }
+  .hero-photo img {
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-doux);
+  }
+  h1 {
+    font-size: clamp(30px, 4.5vw, 44px);
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .hero p.sous { font-size: 20px; color: var(--gris); margin-bottom: 36px; }
+  .cta {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background .2s;
+  }
+  .cta:hover { background: #9a4419; }
+  .cta.secondaire {
+    background: transparent; color: var(--accent);
+    border: 1.5px solid var(--accent);
+    margin-left: 12px;
+  }
+  .cta.secondaire:hover { background: var(--accent-doux); }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 72px 0; border-bottom: 1px solid #e5e0da; }
+  h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 32px;
+  }
+  h2 .num { color: var(--accent); font-size: 16px; display: block;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .lead { font-size: 21px; font-style: italic; color: var(--gris);
+    max-width: 640px; }
+
+  /* Problème */
+  .probleme blockquote {
+    font-size: 22px; font-style: italic;
+    border-left: 3px solid var(--accent);
+    padding-left: 24px; margin: 28px 0;
+    max-width: 640px;
+  }
+  .frustration { color: var(--accent); }
+
+  /* Méthode */
+  .leviers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; margin-top: 40px; }
+  .levier {
+    background: #fff; border: 1px solid #e5e0da;
+    border-radius: 10px; padding: 32px 28px;
+  }
+  .levier h3 { font-size: 22px; font-weight: normal; margin: 12px 0 16px; }
+  .levier .icone { font-size: 28px; }
+  .levier p.tag { font-style: italic; color: var(--gris); margin-bottom: 16px; font-size: 16px; }
+  .levier ul { list-style: none; }
+  .levier li { padding-left: 20px; position: relative; margin-bottom: 10px; font-size: 16px; }
+  .levier li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+
+  /* Pourquoi moi */
+  .moi { display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; }
+  .moi-texte { flex: 1 1 420px; }
+  .moi-texte blockquote {
+    font-size: 20px; font-style: italic;
+    border-left: 3px solid var(--accent);
+    padding-left: 24px; margin: 24px 0;
+  }
+  .moi-chiffres { flex: 0 0 240px; }
+  .chiffre { margin-bottom: 28px; }
+  .chiffre .n { font-size: 40px; color: var(--accent); font-style: italic; }
+  .chiffre .l { font-size: 15px; color: var(--gris); font-family: -apple-system, Helvetica, Arial, sans-serif; }
+
+  /* Offre */
+  .offre-box {
+    background: #fff; border: 1px solid #e5e0da;
+    border-radius: 10px; padding: 40px; margin-top: 32px;
+  }
+  .lien-offre { margin-top: 28px; font-family: -apple-system, Helvetica, Arial, sans-serif; font-size: 15px; }
+  .lien-offre a { color: var(--accent); text-decoration: none; border-bottom: 1.5px solid var(--accent-doux); }
+  .lien-offre a:hover { border-color: var(--accent); }
+  .offre-box h3 { font-size: 24px; font-weight: normal; margin-bottom: 8px; }
+  .offre-box .format { color: var(--accent); font-style: italic; margin-bottom: 24px; }
+  .offre-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 640px) { .offre-cols { grid-template-columns: 1fr; } }
+  .offre-cols ul { list-style: none; }
+  .offre-cols li { padding-left: 20px; position: relative; margin-bottom: 12px; }
+  .offre-cols li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+  .offre-cols h4 { font-size: 16px; text-transform: uppercase; letter-spacing: 1px;
+    font-family: -apple-system, Helvetica, Arial, sans-serif; color: var(--gris); margin-bottom: 16px; }
+
+  /* Processus */
+  .etapes { counter-reset: etape; margin-top: 32px; }
+  .etape { display: flex; gap: 24px; margin-bottom: 32px; max-width: 640px; }
+  .etape::before {
+    counter-increment: etape; content: counter(etape);
+    flex: 0 0 44px; height: 44px;
+    border: 1.5px solid var(--accent); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-style: italic; font-size: 20px; color: var(--accent);
+  }
+  .etape h3 { font-size: 20px; font-weight: normal; }
+  .etape p { color: var(--gris); font-size: 16px; }
+
+  /* CTA final */
+  .final { text-align: center; border-bottom: none; }
+  .final h2 { margin-bottom: 16px; }
+  .final p { color: var(--gris); max-width: 520px; margin: 0 auto 36px; }
+
+  footer {
+    padding: 40px 0; text-align: center;
+    font-size: 14px; color: var(--gris);
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+  }
+  footer a { color: var(--gris); }
+
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    header { padding: 56px 0 48px; }
+    section { padding: 48px 0; }
+    .cta.secondaire { margin-left: 0; margin-top: 12px; display: inline-block; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hero">
+    <div class="hero-text">
+      <h1>Vous avez l'expertise.<br>Mais pas encore <em>la voix qui porte</em>.</h1>
+      <p class="sous">Coaching d'experts et managers introvertis — prendre sa place sans hausser la voix.</p>
+      <a class="cta" href="https://www.linkedin.com/in/gowen-pottiez/" target="_blank" rel="noopener">Discutons sur LinkedIn</a>
+      <a class="cta secondaire" href="mailto:gpottiez@proton.me?subject=VOIX">Écrire « VOIX » par email</a>
+    </div>
+    <div class="hero-photo">
+      <img src="Photo_GP.jpg" alt="Gowen Pottiez, coach">
+    </div>
+  </div>
+</header>
+
+<section class="probleme">
+  <div class="wrap">
+    <h2><span class="num">Le problème</span>Combien d'idées avez-vous mises de côté cette semaine&nbsp;?</h2>
+    <p class="lead">Plutôt que de les partager en réunion, avec ces pensées en boucle&nbsp;:</p>
+    <blockquote>«&nbsp;Ai-je le droit de parler sans l'accord de mon chef&nbsp;?<br>
+    Ai-je assez d'expertise&nbsp;? Vais-je être mal jugé&nbsp;?&nbsp;»</blockquote>
+    <p>Et cette frustration, cinq minutes plus tard, de voir votre idée formulée par un autre — <span class="frustration">et de le voir en récolter tout le crédit.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">La méthode</span>Trois leviers, un alignement</h2>
+    <div class="leviers">
+      <div class="levier">
+        <span class="icone">🔍</span>
+        <h3>La Quête de soi</h3>
+        <p class="tag">Habiter votre cadre et gagner en légitimité.</p>
+        <ul>
+          <li>Identifier vos valeurs profondes pour ne plus attendre la permission</li>
+          <li>Déconstruire le syndrome de l'imposteur</li>
+          <li>Vous positionner comme expert, sans vous justifier</li>
+        </ul>
+      </div>
+      <div class="levier">
+        <span class="icone">🧠</span>
+        <h3>La Structure</h3>
+        <p class="tag">Clarifier vos pensées et vos prises de parole.</p>
+        <ul>
+          <li>En finir avec les idées qui partent dans tous les sens sous stress</li>
+          <li>Structurer un message clair en 3 minutes avant une réunion</li>
+          <li>Prendre la parole de façon nette, percutante, mémorable</li>
+        </ul>
+      </div>
+      <div class="levier">
+        <span class="icone">⚡</span>
+        <h3>L'Énergie</h3>
+        <p class="tag">Rester aligné sans vous épuiser.</p>
+        <ul>
+          <li>Comprendre pourquoi votre barre d'énergie se vide plus vite</li>
+          <li>Créer vos rituels de récupération pour tenir la durée</li>
+          <li>Aligner pensées, émotions et actions aux moments qui comptent</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap moi">
+    <div class="moi-texte">
+      <h2><span class="num">Pourquoi moi</span>Parce que je connais ce silence de l'intérieur</h2>
+      <p>Introverti moi-même, j'ai subi ce silence jusqu'au jour où un responsable m'a lancé&nbsp;:</p>
+      <blockquote>«&nbsp;Tu sais Gowen, on n'en a rien à faire de ce que tu penses.&nbsp;»</blockquote>
+      <p>Cet électrochoc m'a poussé à me former et à accompagner, depuis 10 ans, des dizaines d'experts au sein de mes équipes. J'ai vu les meilleurs se taire en CODIR pendant que des décisions partaient dans le mur.</p>
+    </div>
+    <div class="moi-chiffres">
+      <div class="chiffre">
+        <div class="n">15 ans</div>
+        <div class="l">Euronext &amp; Crédit Agricole — Delivery Manager, Agile Master</div>
+      </div>
+      <div class="chiffre">
+        <div class="n">10 ans</div>
+        <div class="l">d'accompagnement d'experts et d'équipes</div>
+      </div>
+      <div class="chiffre">
+        <div class="n">TedX</div>
+        <div class="l">conférencier — NCL Days, ateliers collaboration &amp; IA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">L'accompagnement</span>Trois mois pour changer de place</h2>
+    <div class="offre-box">
+      <h3>Coaching individuel — 3 mois</h3>
+      <p class="format">6 séances de 90 minutes · une toutes les deux semaines</p>
+      <div class="offre-cols">
+        <div>
+          <h4>Le format</h4>
+          <ul>
+            <li>1 séance de 90 min toutes les 2 semaines</li>
+            <li>Support entre séances (questions par message)</li>
+            <li>Outils et exercices personnalisés à chaque levier</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ce que vous obtenez</h4>
+          <ul>
+            <li>Vous prenez la parole là où vous vous taisiez</li>
+            <li>Vous obtenez les arbitrages que vous n'arriviez pas à décrocher</li>
+            <li>Vous êtes identifié comme un leader — sans avoir changé de personnalité</li>
+            <li>Vous rentrez chez vous avec encore de l'énergie</li>
+          </ul>
+        </div>
+      </div>
+      <p class="lien-offre"><a href="offre.html">Découvrir la page détaillée de l'accompagnement →</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">Comment ça commence</span>Trois étapes, aucune pression</h2>
+    <div class="etapes">
+      <div class="etape">
+        <div>
+          <h3>Un call de découverte — 30 min, gratuit</h3>
+          <p>On identifie ensemble vos blocages principaux. Sans engagement.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div>
+          <h3>Une proposition personnalisée</h3>
+          <p>Si — et seulement si — c'est le bon fit des deux côtés.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div>
+          <h3>Démarrage sous 2 semaines</h3>
+          <p>Premier levier travaillé dès la séance 1.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Montrer votre voie, sans hausser la voix.</h2>
+    <p>Envoyez-moi «&nbsp;VOIX&nbsp;» en message privé — je vous propose un call de 30 minutes pour voir si c'est fait pour vous.</p>
+    <a class="cta" href="https://www.linkedin.com/in/gowen-pottiez/" target="_blank" rel="noopener">Message sur LinkedIn</a>
+    <a class="cta secondaire" href="mailto:gpottiez@proton.me?subject=VOIX">gpottiez@proton.me</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Gowen Pottiez — Coach relationnel &amp; formateur ·
+    <a href="mailto:gpottiez@proton.me">gpottiez@proton.me</a> ·
+    <a href="https://www.linkedin.com/in/gowen-pottiez/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
